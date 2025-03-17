@@ -28,7 +28,7 @@ def build_dataset(image_set, args):
     if args.dataset_file == 'vanke':
         from .vanke import build_vanke
         return build_vanke(image_set, args)
-    if arg.dataset_file == 'skyscapes_bb':
+    if args.dataset_file == 'skyscapes_bb':
         from .skyscapes_bb import build
         return build(image_set, args)
     raise ValueError(f'dataset {args.dataset_file} not supported')
